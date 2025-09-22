@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Himanth Bammidi — Designer Portfolio</title>
+  <meta name="description" content="Portfolio of Himanth Bammidi — Photoshop & graphic designer." />
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="./stuff/my photo.jpeg" alt="Himanth photo" /></div>
+        <div>
+          <h1>Himanth Bammidi</h1>
+          <div style="color:var(--muted);font-size:13px;">Photoshop & Graphic Designer</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-left">
+          <h2>Hi — I'm Himanth. 🎨
+            <span style="display:block;color:var(--muted);font-size:16px;margin-top:8px">
+              I create posters, thumbnails, ads and photo edits using Photoshop. ✨
+            </span>
+          </h2>
+          <p class="meta">This portfolio showcases selected projects — click any item to preview or download the image.</p>
+          <div style="margin-top:16px">
+            <a class="cta" href="#portfolio">See portfolio</a>
+          </div>
+        </div>
+
+        <aside class="hero-right">
+          <div class="profile-card">
+            <div class="profile-photo"><img src="./stuff/my photo.jpeg" alt="Your photo" /></div>
+            <div class="about">
+              <p><strong>About me</strong></p>
+              <p style="color:var(--muted);font-size:14px">
+                I'm a dedicated Photoshop designer who loves turning ideas into eye-catching visuals. 🎭
+                I specialise in movie posters, YouTube thumbnails, ad posters and wedding designs. 💍
+                I'm available for freelancing and collaborations. 🤝
+              </p>
+              <div style="margin-top:10px;color:var(--muted);font-size:13px">
+                Location: Mangalagiri, India 🇮🇳 • Open to work 💼
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <div class="section-title">
+          <h2 style="margin:0">Selected works 🖼️</h2>
+          <div style="color:var(--muted);font-size:14px">Click to preview — Download image</div>
+        </div>
+
+        <div class="grid" id="gallery">
+          <article class="card">
+            <img src="./stuff/JOB.jpg" alt="YouTube thumbnail" loading="lazy" />
+            <div class="card-body">
+              <h3>YT Thumbnail — 'JOB'</h3>
+              <p>Thumbnail made for a Photoshop speed-edit video.</p>
+              <div class="card-actions">
+                <button class="btn secondary" onclick="viewImage('./stuff/JOB.jpg')">Preview</button>
+                <a class="btn primary" href="./stuff/JOB.jpg" download>Download Image</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="./stuff/programming.jpg" alt="YouTube thumbnail" loading="lazy" />
+            <div class="card-body">
+              <h3>YT Thumbnail — 'programming'</h3>
+              <p>Thumbnail made for a Photoshop speed-edit video.</p>
+              <div class="card-actions">
+                <button class="btn secondary" onclick="viewImage('./stuff/programming.jpg')">Preview</button>
+                <a class="btn primary" href="./stuff/programming.jpg" download>Download Image</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="./stuff/python yt.jpg" alt="YouTube thumbnail" loading="lazy" />
+            <div class="card-body">
+              <h3>YT Thumbnail — 'python yt'</h3>
+              <p>Thumbnail made for a Photoshop speed-edit video.</p>
+              <div class="card-actions">
+                <button class="btn secondary" onclick="viewImage('./stuff/python yt.jpg')">Preview</button>
+                <a class="btn primary" href="./stuff/python yt.jpg" download>Download Image</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Global PSD download button -->
+        <div style="text-align:center; margin-top:30px;">
+          <a class="btn primary" href="https://drive.google.com/drive/folders/1um9BRLxWvE5KaqHp_iS-2mY7TKDaaGpD?usp=sharing" download>📂 Download All PSDs</a>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>More about me 🌟</h2>
+        <p style="color:var(--muted)">
+          I started designing in Photoshop in 2025. 🎨 I enjoy composition, color grading, photo retouching and mockups. 🖌️
+          I can provide layered PSDs with organized groups and labeled layers for easy edits. 📁
+        </p>
+        <p style="color:var(--muted);font-style:italic;margin-top:10px">
+          "Turning imagination into stunning visuals, one pixel at a time."
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>📬 Contact Me</h2>
+        <div class="contact-links">
+          <a><i class="fas fa-envelope"></i>Email: himanth3114@gmail.com</a>
+          <a href="https://www.instagram.com/h_desigens/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+          <a href="https://www.linkedin.com/in/himanth2004/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+          <a><i class="fas fa-phone"></i>Call: 7978688049</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Himanth Bammidi — All rights reserved</div>
+    </footer>
+  </div>
+
+  <!-- SINGLE Image preview modal with ❌ -->
+  <div id="modal" class="modal">
+    <span id="closeModal" class="close-btn">❌</span>
+    <img id="modalImg" src="" alt="Preview" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
